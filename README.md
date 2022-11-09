@@ -11,4 +11,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. Run Command: 'node server.js'
 4. Node server keep running. Need restart after change
 
-
+#### Task: Add express - simplify node commands
