@@ -54,7 +54,7 @@ const port =process.env.PORT || 3002;
 
 app.set('port', port);
 const server = http.createServer(app);
-
+console.log('starting server on ' + port);
 server.listen(port);
 ```
 
