@@ -117,3 +117,5 @@ server.on("error", onError);
 server.on("listening", onListening);
 server.listen(port);
 ```
+
+1. run 'npm install --save-dev nodemon'
