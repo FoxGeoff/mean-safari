@@ -1,8 +1,15 @@
+/**
+ * File server.js
+ * Very basic server using Express framwork
+ */
+
 const http = require('http');
+const app = require('./backend/app');
 
-const server = http.createServer((req, res) => {
-  res.end('The first responce');
-});
+// use enviroment var in production or port
+const port =process.env.PORT || 3002;
 
-// use enviroment var in production or port 3001
-server.listen(process.env.PORT ||3001);
+app.set('port', port);
+const server = http.createServer(app);
+
+server.listen(port);
