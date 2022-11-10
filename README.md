@@ -142,3 +142,9 @@ server.listen(port);
     {"id":"asdasr","title":"first server-side post","content":"Test data #1 from the Node server"},{"id":"bgdsa","title":"second server-side post","content":"Test data #2 from the Node server"}
   ]
 }
+
+## Kanban Task: Chapter 4 : Working with MongoDB (Videos)
+
+1. MongoDb NoSQL DB > Collections and Documents (SQL Tables and Records).
+
+### Task: Adding Mongoose (video)
