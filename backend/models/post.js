@@ -4,10 +4,13 @@
 
 const mongoose = require("mongoose");
 
-// NB String in Mongoose and not string in Angular
-const postSchema = mongooseSchema({
-  title: { type: String, required: true },
-  content: { type: String, default: "Missing Data" },
+
+// NB String in Mongoose / javascript and not string (TypeScript) in Angular
+// Todo: options: required: true
+const postSchema = mongoose.Schema({
+  title: { type: String, default: "Missing Title" },
+  content: { type: String, default: "Missing Content" },
 });
 
-module.exports = mongoose.model('Post', postSchema);
+// Schema and Model combined
+module.exports = mongoose.model("Post", postSchema);

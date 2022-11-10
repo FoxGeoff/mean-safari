@@ -153,7 +153,7 @@ server.listen(port);
 1. Used to connect to the Database
 2. Add models folder
 3. run 'npm install --save mongoose'
-4 ref https://www.npmjs.com/package//mongoose
+4 ref <https://www.npmjs.com/package//mongoose>
 
 ```javascript
 /**
@@ -172,3 +172,6 @@ module.exports = mongoose.model('Post', postSchema);
 ```
 
 ### Task: Creating a POST Instance (video)
+
+1. Run: 'npm i --save body-parser'
+2. Add to app.js
