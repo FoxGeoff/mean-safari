@@ -7,13 +7,27 @@ const express = require("express");
 
 const app = express();
 
-app.use((req, res, next) => {
-  console.log('first middleware just ran')
-  next();
-});
+app.use("/api/posts", (req, res, next) => {
+  const posts = [
+    {
+      id: "asdasr",
+      title: "first server-side post",
+      content: "Test data #1 from the Node server",
+    },
+    {
+      id: "bgdsa",
+      title: "second server-side post",
+      content: "Test data #2 from the Node server",
+    }
+  ];
 
-app.use((req, res, next) => {
-  res.send('all done with Express middleware!')
+  /**
+   * Demo first serve data (POST)
+   */
+  res.status(200).json({
+    message: "success, data from server",
+    posts: posts
+  });
 });
 
 module.exports = app;

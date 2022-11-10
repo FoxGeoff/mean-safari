@@ -119,3 +119,26 @@ server.listen(port);
 ```
 
 1. run 'npm install --save-dev nodemon'
+
+### Task: Fetching Initial Posts (Video)
+
+1. This adds our first route
+
+```javascript
+// app.js (middleware)
+// adding a path, status and json data
+  res.status(200).json({
+    message: "success, data from server",
+    posts: posts
+  });
+```
+
+``` Json
+// returned data @ localhost:3000://api/posts
+{
+  "message":"success, data from server",
+  "posts":
+  [
+    {"id":"asdasr","title":"first server-side post","content":"Test data #1 from the Node server"},{"id":"bgdsa","title":"second server-side post","content":"Test data #2 from the Node server"}
+  ]
+}
