@@ -142,9 +142,33 @@ server.listen(port);
     {"id":"asdasr","title":"first server-side post","content":"Test data #1 from the Node server"},{"id":"bgdsa","title":"second server-side post","content":"Test data #2 from the Node server"}
   ]
 }
+```
 
 ## Kanban Task: Chapter 4 : Working with MongoDB (Videos)
 
 1. MongoDb NoSQL DB > Collections and Documents (SQL Tables and Records).
 
 ### Task: Adding Mongoose (video)
+
+1. Used to connect to the Database
+2. Add models folder
+3. run 'npm install --save mongoose'
+4 ref https://www.npmjs.com/package//mongoose
+
+```javascript
+/**
+ * file: backend/post.js
+ */
+
+const mongoose = require("mongoose");
+
+// NB String in Mongoose and not string in Angular
+const postSchema = mongooseSchema({
+  title: { type: String, required: true },
+  content: { type: String, default: "Missing Data" },
+});
+
+module.exports = mongoose.model('Post', postSchema);
+```
+
+### Task: Creating a POST Instance (video)
