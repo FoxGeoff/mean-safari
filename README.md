@@ -186,7 +186,9 @@ module.exports = mongoose.model('Post', postSchema);
 4. post/post.model
 5. post.services
 
+### Task: Add Angular Material (<https://material.angular.io/>)
 
+1. RUN: ng add @angular/material
 
 ### Task: Understanding CORS (video #9)
 
