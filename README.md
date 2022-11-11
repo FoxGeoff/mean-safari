@@ -185,6 +185,7 @@ module.exports = mongoose.model('Post', postSchema);
 3. post/post-list/post-list.component.*
 4. post/post.model
 5. post.services
+6. Add to app.module.ts: material components and FormsModule
 
 ### Task: Add Angular Material (<https://material.angular.io/>)
 
