@@ -10,8 +10,9 @@ const { Type } = require("@angular-devkit/build-angular");
 const Post = require("./models/post");
 
 const app = express();
-
+// for POST requests json
 app.use(bodyParser.json());
+// for POST requests url
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
@@ -33,11 +34,12 @@ app.use((req, res, next) => {
 
 // demo: a post end point route
 // http://localhost:3000/api/posts
+// this requires to run: 'npm i --save body-parser'
 app.post("/api/posts", (req, res, next) => {
   const post = req.body;
   console.log(post);
   res.status(201).json({
-    message: "Post added successfully",
+    message: "Post added successfully"
   });
 });
 

@@ -197,4 +197,15 @@ module.exports = mongoose.model('Post', postSchema);
 
 ### Task: Adding the POST Backend Point (video #10)
 
+```JavaScript
+// file app.js (near the top)
+...
+const app = express();
+// for POST requests json
+app.use(bodyParser.json());
+// for POST requests url
+app.use(bodyParser.urlencoded({ extended: false }));
+...
+```
+
 ### Task: Adding Angular (video #11)
