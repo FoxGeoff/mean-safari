@@ -209,3 +209,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 ```
 
 ### Task: Adding Angular (video #11)
+
+1. On post
+
+```json
+// serve-side conformation @ localhost:3000
+[nodemon] starting `node server.js`
+{ id: null, title: 'test foe server post', content: 'Cool stuff' }
+```
+
+```json
+// browser conformation @localhost:2400
+Angular is running in development mode. Call enableProdMode() to enable production mode
+Post added successfully
+```

@@ -41,6 +41,7 @@ app.post("/api/posts", (req, res, next) => {
   res.status(201).json({
     message: "Post added successfully"
   });
+  // NO NO! next();
 });
 
 // demo app.use() for downloading data from server
