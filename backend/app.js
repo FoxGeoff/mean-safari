@@ -15,14 +15,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
+  // for CORS > allow all websites domains access
   res.setHeader("Access-Control-Allow-Origin", "*");
+  //for CORS > allows formats: CSV (Origin)...etc.
   res.setHeader(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
+  // http words - OPTIONS is required for POST
   res.setHeader(
     "Access-Control-Allow-Methods",
-    "GET, POST, PATCH, DELETE, OPTIONS"
+    "GET, POST, PATCH, DELETE, PUT, OPTIONS"
   );
   next();
 });

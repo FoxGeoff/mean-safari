@@ -11,6 +11,8 @@ export class PostsService {
 
   constructor(private http: HttpClient) {}
 
+  // http don't need an unsubscribe
+  // the 'get' auto transforms from json to js obj form
   getPosts() {
     this.http
       .get<{ message: string; posts: Post[] }>(
@@ -18,6 +20,7 @@ export class PostsService {
       )
       .subscribe(postData => {
         this.posts = postData.posts;
+        // copy is used
         this.postsUpdated.next([...this.posts]);
       });
   }

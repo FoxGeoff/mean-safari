@@ -193,6 +193,8 @@ module.exports = mongoose.model('Post', postSchema);
 
 ### Task: Understanding CORS (video #9)
 
+1. This is done on the server-side code, by setting the correct headers
+
 ### Task: Adding the POST Backend Point (video #10)
 
 ### Task: Adding Angular (video #11)
