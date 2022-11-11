@@ -6,14 +6,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Original Code Ref: <https://github.com/PacktPublishing/Angular-and-Node.js---The-MEAN-Stack-Guide>
 
-## Kanban Task: Chapter 3 : Adding NodeJS to our Project Video: Adding the Node Backend
+## Kanban Task: Chapter 3 : Adding NodeJS to our Project Video: Adding the Node Backend (partial)
 
 1. Add backend folder
 2. Add server.js file
 3. Run Command: 'node server.js'
 4. Node server keep running. Need restart after change
 
-### Task: Add express - simplify node commands (video)
+### Task: Add express - simplify node commands (video #5)
 
 1. Run: 'npm i --save express'
 2. Add file: backend/app.js
@@ -58,7 +58,7 @@ console.log('starting server on ' + port);
 server.listen(port);
 ```
 
-### Task: Improving the server.js Code (video)
+### Task: Improving the server.js Code (video #6)
 
 ```Javascript
 /**
@@ -120,7 +120,7 @@ server.listen(port);
 
 1. run 'npm install --save-dev nodemon'
 
-### Task: Fetching Initial Posts (Video)
+### Task: Fetching Initial Posts (Video #7)
 
 1. This adds our first route
 
@@ -175,3 +175,19 @@ module.exports = mongoose.model('Post', postSchema);
 
 1. Run: 'npm i --save body-parser'
 2. Add to app.js
+
+## Kanban Task: Chapter 3 : Adding NodeJS to our Project (cont.part #8 ~ #)
+
+### Task: Using  the Angular HTTP Client (video #8)
+
+1. House Keeping: Add Angular Post conponents...
+2. post/post-create/post-create.component.*
+3. post/post-list/post-list.component.*
+4. post/post.model
+5. post.services
+
+### Task: Understanding CORS (video #9)
+
+### Task: Adding the POST Backend Point (video #10)
+
+### Task: Adding Angular (video #11)
