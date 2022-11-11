@@ -18,15 +18,12 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-Width",
-    "Content-Type, Accept"
+    "Origin, X-Requested-With, Content-Type, Accept"
   );
-
   res.setHeader(
-    "Access-control-Allow-Methods",
-    "GET, POST, PATCH< OPTIONS"
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, DELETE, OPTIONS"
   );
-
   next();
 });
 // ==============
@@ -34,10 +31,7 @@ app.use((req, res, next) => {
 // demo: a post end point route
 // http://localhost:3000/api/posts
 app.post("/api/posts", (req, res, next) => {
-  const post = new Post({
-    title: req.body.title,
-    content: req.body.content,
-  });
+  const post = req.body;
   console.log(post);
   res.status(201).json({
     message: "Post added successfully",
@@ -45,8 +39,8 @@ app.post("/api/posts", (req, res, next) => {
 });
 
 // demo app.use() for downloading data from server
-// http://localhost:3000/api/use/posts
-app.use("/api/use/posts", (req, res, next) => {
+// http://localhost:3000/api/posts
+app.get("/api/posts", (req, res, next) => {
   const posts = [
     {
       id: "asdasr",
