@@ -223,3 +223,39 @@ app.use(bodyParser.urlencoded({ extended: false }));
 Angular is running in development mode. Call enableProdMode() to enable production mode
 Post added successfully
 ```
+
+## Kanban Task: Chapter 4 : Working with MongoDB
+
+### Task: Creating a POST Instance (video #8)
+
+```javascript
+/* We are now using mongoose */
+
+// demo: a post end point route from DB
+// http://localhost:3000/api/posts
+// this requires to run: 'npm i --save body-parser'
+app.post("/api/posts", (req, res, next) => {
+  // managed by mongoose
+  const post = new Post({
+    title:req.body.title,
+    content: req.body.content
+  });
+  console.log(post);
+  res.status(201).json({
+    message: "Post added successfully"
+  });
+  // NO NO! next();
+});
+```
+
+```json
+[nodemon] starting `node server.js`
+{
+  title: 'Test Mongoose',
+  content: 'Returns a server-side object and is logged',
+  _id: new ObjectId("636ec2639de084482af57ff1")
+}
+
+```
+
+### Task: Connecting our Node Express App to MongoDB (video #9)

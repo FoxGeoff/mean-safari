@@ -32,7 +32,26 @@ app.use((req, res, next) => {
 });
 // ==============
 
-// demo: a post end point route
+
+// demo: a post end point route from DB
+// http://localhost:3000/api/posts
+// this requires to run: 'npm i --save body-parser'
+app.post("/api/posts", (req, res, next) => {
+  // managed by mongoose
+  const post = new Post({
+    title:req.body.title,
+    content: req.body.content
+  });
+  console.log(post);
+  res.status(201).json({
+    message: "Post added successfully"
+  });
+  // NO NO! next();
+});
+
+
+/*
+// demo: a post end point route no DB
 // http://localhost:3000/api/posts
 // this requires to run: 'npm i --save body-parser'
 app.post("/api/posts", (req, res, next) => {
@@ -43,7 +62,7 @@ app.post("/api/posts", (req, res, next) => {
   });
   // NO NO! next();
 });
-
+*/
 // demo app.use() for downloading data from server
 // http://localhost:3000/api/posts
 app.get("/api/posts", (req, res, next) => {
